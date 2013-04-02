@@ -67,7 +67,6 @@ families = ['collected_properties',
 print "Creating column families"
 for fam in families:
     cass.create_column_family(cass.ks, fam)
-    pass
 
 # Let's see if those keyspaces are set up correctly
 print "Keyspaces: "
@@ -134,10 +133,6 @@ for c in xrange(4,21):
                 'healthy': random.choice(['True','False']),
                 'other_thing': str(random.randint(2,9)),
                 'load_avg': str("%2.2f" % (random.random()*10))})
-        pass
-
-
-
 
 # Let's see what it all looks like
 # ps. Using a bare get_range() is genearlly a bad idea
